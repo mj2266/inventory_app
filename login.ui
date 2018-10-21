@@ -215,7 +215,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">c</string>
+          <string notr="true">background-color: rgb(44, 135, 255);</string>
          </property>
          <property name="text">
           <string>LOGIN</string>
@@ -245,8 +245,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="lo.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
