@@ -6,17 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1429</width>
-    <height>830</height>
+    <width>716</width>
+    <height>571</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 147, 255, 255), stop:1 rgba(255, 255, 255, 255));
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 147, 255, 255), stop:1 rgba(178, 255, 169, 255));
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 147, 255, 255), stop:1 rgba(178, 255, 169, 255));</string>
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 28, 255, 255), stop:1 rgba(129, 255, 229, 255));</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
@@ -97,7 +95,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <item row="8" column="0">
-        <widget class="QCheckBox" name="checkBox">
+        <widget class="QCheckBox" name="rememberPasswordCheckBox">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -110,7 +108,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         </widget>
        </item>
        <item row="5" column="0">
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="passwordLabel">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -141,7 +139,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="userNameLabel">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -162,7 +160,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         </widget>
        </item>
        <item row="0" column="0" alignment="Qt::AlignHCenter">
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="loginLabel">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -192,7 +190,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         </widget>
        </item>
        <item row="9" column="0">
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="loginButton">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -223,10 +221,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="usernameInput"/>
        </item>
        <item row="7" column="0">
-        <widget class="QLineEdit" name="lineEdit_2"/>
+        <widget class="QLineEdit" name="passwordInput"/>
        </item>
       </layout>
      </widget>
@@ -238,7 +236,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1429</width>
+     <width>716</width>
      <height>21</height>
     </rect>
    </property>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1114</width>
-    <height>609</height>
+    <width>895</width>
+    <height>511</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,7 +29,7 @@ font-weight: bold;
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="3" column="4">
-     <widget class="QCommandLinkButton" name="commandLinkButton_5">
+     <widget class="QCommandLinkButton" name="billingButton">
       <property name="styleSheet">
        <string notr="true">background-image: url(:/Homepage/Homepage/Billing.png);
 background-repeat: no-repeat;
@@ -49,7 +49,7 @@ background-color: rgb(191, 191, 255);
      </widget>
     </item>
     <item row="2" column="2">
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="customerLabel">
       <property name="styleSheet">
        <string notr="true">font-size: 28px;</string>
       </property>
@@ -62,7 +62,7 @@ background-color: rgb(191, 191, 255);
      </widget>
     </item>
     <item row="1" column="6">
-     <widget class="QCommandLinkButton" name="commandLinkButton_3">
+     <widget class="QCommandLinkButton" name="ordersButton">
       <property name="styleSheet">
        <string notr="true">background-image: url(:/Homepage/Homepage/Orders.png);
 background-repeat: no-repeat;
@@ -78,6 +78,9 @@ background-color: rgb(191, 191, 255);
       <property name="icon">
        <iconset>
         <normaloff>:/Homepage/background.png</normaloff>:/Homepage/background.png</iconset>
+      </property>
+      <property name="description">
+       <string/>
       </property>
      </widget>
     </item>
@@ -199,7 +202,7 @@ background-color: rgb(191, 191, 255);
      </spacer>
     </item>
     <item row="0" column="8">
-     <widget class="QLabel" name="label_8">
+     <widget class="QLabel" name="userNameLabel">
       <property name="styleSheet">
        <string notr="true">font-size:20px;</string>
       </property>
@@ -303,7 +306,7 @@ background-color: rgb(191, 191, 255);
      </spacer>
     </item>
     <item row="0" column="2" colspan="5">
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="varunEnterprisesLabel">
       <property name="font">
        <font>
         <family>Times New Roman</family>
@@ -441,21 +444,21 @@ background-color: rgb(191, 191, 255);
      </spacer>
     </item>
     <item row="8" column="7">
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="logoutButton">
       <property name="text">
        <string>Logout</string>
       </property>
      </widget>
     </item>
     <item row="8" column="1">
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="supportButton">
       <property name="text">
        <string>Support</string>
       </property>
      </widget>
     </item>
     <item row="6" column="4">
-     <widget class="QLabel" name="label_6">
+     <widget class="QLabel" name="billingLabel">
       <property name="text">
        <string>Billing</string>
       </property>
@@ -465,7 +468,7 @@ background-color: rgb(191, 191, 255);
      </widget>
     </item>
     <item row="3" column="2">
-     <widget class="QCommandLinkButton" name="commandLinkButton_4">
+     <widget class="QCommandLinkButton" name="pricingButton">
       <property name="styleSheet">
        <string notr="true">background-image: url(:/Homepage/Homepage/Pricing.png);
 background-repeat: no-repeat;
@@ -485,7 +488,7 @@ background-color: rgb(191, 191, 255);
      </widget>
     </item>
     <item row="2" column="6">
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="ordersLabel">
       <property name="text">
        <string>Orders</string>
       </property>
@@ -495,7 +498,7 @@ background-color: rgb(191, 191, 255);
      </widget>
     </item>
     <item row="1" column="4">
-     <widget class="QCommandLinkButton" name="commandLinkButton_2">
+     <widget class="QCommandLinkButton" name="suppliersButton">
       <property name="styleSheet">
        <string notr="true">background-image: url(:/Homepage/Homepage/Supplier.png);
 background-repeat: no-repeat;
@@ -515,7 +518,7 @@ background-color: rgb(191, 191, 255);
      </widget>
     </item>
     <item row="6" column="2">
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="pricingLabel">
       <property name="text">
        <string>Pricing</string>
       </property>
@@ -525,7 +528,7 @@ background-color: rgb(191, 191, 255);
      </widget>
     </item>
     <item row="6" column="6">
-     <widget class="QLabel" name="label_7">
+     <widget class="QLabel" name="stocksLabel">
       <property name="text">
        <string>Stocks</string>
       </property>
@@ -535,7 +538,7 @@ background-color: rgb(191, 191, 255);
      </widget>
     </item>
     <item row="3" column="6">
-     <widget class="QCommandLinkButton" name="commandLinkButton_6">
+     <widget class="QCommandLinkButton" name="stocksButton">
       <property name="styleSheet">
        <string notr="true">background-image: url(:/Homepage/Homepage/Stock.png);
 background-repeat: no-repeat;
@@ -555,7 +558,7 @@ background-color: rgb(191, 191, 255);
      </widget>
     </item>
     <item row="2" column="4">
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="suppliersLabel">
       <property name="text">
        <string>Suppliers</string>
       </property>
@@ -565,7 +568,7 @@ background-color: rgb(191, 191, 255);
      </widget>
     </item>
     <item row="1" column="2">
-     <widget class="QCommandLinkButton" name="commandLinkButton">
+     <widget class="QCommandLinkButton" name="customerButton">
       <property name="styleSheet">
        <string notr="true">background-image: url(:/Homepage/Homepage/Customer.png);
 background-repeat: no-repeat;
@@ -656,7 +659,7 @@ background-color: rgb(191, 191, 255);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1114</width>
+     <width>895</width>
      <height>21</height>
     </rect>
    </property>
@@ -664,14 +667,14 @@ background-color: rgb(191, 191, 255);
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <tabstops>
-  <tabstop>commandLinkButton</tabstop>
-  <tabstop>commandLinkButton_2</tabstop>
-  <tabstop>commandLinkButton_3</tabstop>
-  <tabstop>commandLinkButton_4</tabstop>
-  <tabstop>commandLinkButton_5</tabstop>
-  <tabstop>commandLinkButton_6</tabstop>
-  <tabstop>pushButton</tabstop>
-  <tabstop>pushButton_2</tabstop>
+  <tabstop>customerButton</tabstop>
+  <tabstop>suppliersButton</tabstop>
+  <tabstop>ordersButton</tabstop>
+  <tabstop>pricingButton</tabstop>
+  <tabstop>billingButton</tabstop>
+  <tabstop>stocksButton</tabstop>
+  <tabstop>supportButton</tabstop>
+  <tabstop>logoutButton</tabstop>
  </tabstops>
  <resources>
   <include location="rec.qrc"/>
