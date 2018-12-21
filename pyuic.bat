@@ -1,1 +1,1 @@
-C:/Python34/Lib/site-packages/PyQt4/pyuic4.bat -x login.ui -o login.py
+C:/Python34/Lib/site-packages/PyQt4/pyuic4.bat -x homepage.ui -o homepage.py

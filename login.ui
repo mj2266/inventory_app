@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 28, 255, 255), stop:1 rgba(129, 255, 229, 255));</string>
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(207, 138, 0, 255), stop:0.0113636 rgba(255, 211, 76, 255), stop:0.443182 rgba(173, 115, 0, 255), stop:1 rgba(207, 138, 0, 255));</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
@@ -85,10 +85,10 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">background-color: rgba(152, 171, 255, 0);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Plain</enum>
@@ -96,11 +96,20 @@
       <layout class="QGridLayout" name="gridLayout">
        <item row="8" column="0">
         <widget class="QCheckBox" name="rememberPasswordCheckBox">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
          <property name="font">
           <font>
-           <pointsize>10</pointsize>
-           <italic>true</italic>
+           <pointsize>14</pointsize>
+           <italic>false</italic>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">selection-background-color: rgb(248, 250, 215);</string>
          </property>
          <property name="text">
           <string>Remember My Password</string>
@@ -213,7 +222,8 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(44, 135, 255);</string>
+          <string notr="true">background-color: rgba(90, 228, 255, 0);
+background-color: rgba(197, 115, 21, 220);</string>
          </property>
          <property name="text">
           <string>LOGIN</string>
@@ -221,10 +231,31 @@
         </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QLineEdit" name="usernameInput"/>
+        <widget class="QLineEdit" name="usernameInput">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(248, 250, 215);</string>
+         </property>
+        </widget>
        </item>
        <item row="7" column="0">
-        <widget class="QLineEdit" name="passwordInput"/>
+        <widget class="QLineEdit" name="passwordInput">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(248, 250, 215);
+background-color: rgb(248, 250, 215);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
