@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>615</width>
+    <width>629</width>
     <height>546</height>
    </rect>
   </property>
@@ -276,7 +276,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>615</width>
+     <width>629</width>
      <height>21</height>
     </rect>
    </property>
@@ -305,7 +305,7 @@
   </widget>
   <action name="actionShow_Supplier">
    <property name="icon">
-    <iconset theme="stuff" resource="D:/stuff.qrc">
+    <iconset theme="stuff">
      <normaloff>:/staua/study stuff/PYQT/60807.svg</normaloff>:/staua/study stuff/PYQT/60807.svg</iconset>
    </property>
    <property name="text">
@@ -317,7 +317,7 @@
   </action>
   <action name="actionBack">
    <property name="icon">
-    <iconset resource="D:/stuff.qrc">
+    <iconset>
      <normaloff>:/staua/study stuff/PYQT/Left_Arrow_-512.png</normaloff>:/staua/study stuff/PYQT/Left_Arrow_-512.png</iconset>
    </property>
    <property name="text">
@@ -328,8 +328,6 @@
    </property>
   </action>
  </widget>
- <resources>
-  <include location="D:/stuff.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
