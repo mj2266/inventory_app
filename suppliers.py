@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import pymysql
 class Ui_MainWindow(object):
     def populate_tree(self):
         db=pymysql.connect("localhost","root","","ims")
@@ -32,7 +32,33 @@ class Ui_MainWindow(object):
         
         
     def searchTree(self):
-        print("FOOO")
+        print("FOO")
+        searchVal = self.searchInput.text()
+        db=pymysql.connect("localhost","root","","ims")
+        cursor=db.cursor()
+        query = '''SELECT * from supplier
+where supp_name like"'''+searchVal+'''%"
+or supp_id like"'''+searchVal+'''"
+'''
+        try:
+            cursor.execute(query)
+            data=cursor.fetchall()
+            self.tableWidget.setRowCount(0)
+            for row_data in data:
+                row_no =self.tableWidget.rowCount()
+                self.tableWidget.insertRow(row_no)
+                for column_no,data in enumerate(row_data):
+                    self.tableWidget.setItem(row_no,column_no,QtWidgets.QTableWidgetItem(str(data)))
+            db.commit()
+        except pymysql.InternalError as error:
+            code, msg = error.args
+            print("-------",code,msg)
+
+            db.rollback()
+        db.close()
+    
+        
+
         
         
     def setupUi(self, MainWindow):
