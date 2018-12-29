@@ -103,6 +103,9 @@
           </item>
           <item row="1" column="0">
            <widget class="QTableWidget" name="tableWidget">
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
             <column>
              <property name="text">
               <string>ID</string>

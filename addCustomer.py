@@ -4,9 +4,9 @@ from functools import partial
 import rec_rc
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-Form, Base = uic.loadUiType(os.path.join(current_dir, "UI FILES/homepage.ui"))
+Form, Base = uic.loadUiType(os.path.join(current_dir, "UI FILES/addCustomer.ui"))
 
-class homepageWindow(Base, Form):
+class addCustomerDialog(Base, Form):
     def __init__(self, parent=None):
         super(self.__class__, self).__init__(parent)
         self.setupUi(self)
@@ -18,6 +18,7 @@ if __name__ == '__main__':
     if app is None:
         app = QtWidgets.QApplication(sys.argv)
         
-    w = homepageWindow()
+    w = addCustomerDialog()
     w.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec_())# -*- coding: utf-8 -*-
+
