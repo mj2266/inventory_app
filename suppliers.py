@@ -32,7 +32,6 @@ class Ui_MainWindow(object):
         
         
     def searchTree(self):
-        print("FOO")
         searchVal = self.searchInput.text()
         db=pymysql.connect("localhost","root","","ims")
         cursor=db.cursor()
@@ -173,10 +172,10 @@ or supp_id like"'''+searchVal+'''"
 "    }")
         self.toolBar.setObjectName("toolBar")
         MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
-        self.actionShow_Supplier = QtWidgets.QAction(MainWindow)
+        self.actionAdd_Supplier = QtWidgets.QAction(MainWindow)
         icon = QtGui.QIcon.fromTheme("stuff")
-        self.actionShow_Supplier.setIcon(icon)
-        self.actionShow_Supplier.setObjectName("actionShow_Supplier")
+        self.actionAdd_Supplier.setIcon(icon)
+        self.actionAdd_Supplier.setObjectName("actionAdd_Supplier")
         self.actionBack = QtWidgets.QAction(MainWindow)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/staua/study stuff/PYQT/Left_Arrow_-512.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -184,8 +183,7 @@ or supp_id like"'''+searchVal+'''"
         self.actionBack.setObjectName("actionBack")
         self.toolBar.addAction(self.actionBack)
         self.toolBar.addSeparator()
-        self.toolBar.addAction(self.actionShow_Supplier)
-        
+        self.toolBar.addAction(self.actionAdd_Supplier)
         
         
         
@@ -215,8 +213,8 @@ or supp_id like"'''+searchVal+'''"
         self.searchButton.setText(_translate("MainWindow", "Search"))
         self.showAllButton.setText(_translate("MainWindow", "Show All"))
         self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
-        self.actionShow_Supplier.setText(_translate("MainWindow", "Add Supplier"))
-        self.actionShow_Supplier.setToolTip(_translate("MainWindow", "Add Supplier"))
+        self.actionAdd_Supplier.setText(_translate("MainWindow", "Add Supplier"))
+        self.actionAdd_Supplier.setToolTip(_translate("MainWindow", "Add Supplier"))
         self.actionBack.setText(_translate("MainWindow", "Back"))
         self.actionBack.setToolTip(_translate("MainWindow", "Go back"))
 
