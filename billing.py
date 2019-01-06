@@ -1,52 +1,76 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Dec 29 09:56:16 2018
-
-@author: NIHARIKA CHATURVEDI
-"""
-
 import os
 from PyQt5 import QtGui, uic, QtWidgets
 from PyQt5.QtWidgets import QInputDialog
-from functools import partial
 import rec_rc
 from addCustomer import addCustomerDialog
-
+import pymysql
 current_dir = os.path.dirname(os.path.abspath(__file__))
 Form, Base = uic.loadUiType(os.path.join(current_dir, "UI FILES/billing.ui"))
+
 
 class billingWindow(Base, Form):
     def __init__(self, parent=None):
         super(self.__class__, self).__init__(parent)
         self.setupUi(self)
         self.addContact.clicked.connect(self.addCustomer)
-        
-        
-    def createInputDialog(self):
-          text,ok = QInputDialog.getText(self,"input dialog","Enter New Customer" )
-          if ok:
-              self.display.setText(str(text))
-              
+
+        self.populateCombo1()
+        self.populateCombo2()
+        self.cbox1.currentIndexChanged.connect(self.populateCombo2)
+
     def addCustomer(self):
-        #these 4 lines open new page
-        self.billing = QtWidgets.QDialog()
-        self.ui = addCustomerDialog()
-        self.ui.setupUi(self.billing)
-        self.billing.show()
-        #
-        # this line closes main window
-        #w.close()
-        # or
-        #MainWindow.hide()
+        self.addCust = addCustomerDialog()
+        self.addCust.exec_()
+
+    def populateCombo1(self):
+        db = pymysql.connect("localhost", "root", "", "ims")
+        cursor = db.cursor()
+        query = "SELECT category_name from category"
+
+        try:
+            cursor.execute(query)
+            comboBox1Content = cursor.fetchall()
+            self.cbox1.clear()
+            for i in range(len(comboBox1Content)):
+                self.cbox1.addItem("")
+                self.cbox1.setItemText(i, comboBox1Content[i][0])
+
+        except pymysql.InternalError as error:
+            code, msg = error.args
+            print("-------", code, msg)
+
+        db.close()
+
+    def populateCombo2(self):
+        cbox1Text = self.cbox1.currentText()
+        db = pymysql.connect("localhost", "root", "", "ims")
+        cursor = db.cursor()
+        query ='''
+        select item_name 
+        from items, category 
+        where item_category_id = category_id and category_name = "%s"
+        '''%cbox1Text
+        try:
+            cursor.execute(query)
+            comboBox2Content = cursor.fetchall()
+            self.cbox2.clear()
+            for i in range(len(comboBox2Content)):
+                self.cbox2.addItem("")
+                self.cbox2.setItemText(i, comboBox2Content[i][0])
+
+        except pymysql.InternalError as error:
+            code, msg = error.args
+            print("-------", code, msg)
+
+        db.close()
         
-        
-        
+
 if __name__ == '__main__':
     import sys
     app = QtWidgets.QApplication.instance()
     if app is None:
         app = QtWidgets.QApplication(sys.argv)
-        
+
     w = billingWindow()
     w.show()
     sys.exit(app.exec_())

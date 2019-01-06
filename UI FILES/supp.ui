@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>629</width>
-    <height>546</height>
+    <width>447</width>
+    <height>499</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -206,7 +206,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>629</width>
+     <width>447</width>
      <height>21</height>
     </rect>
    </property>
@@ -235,8 +235,8 @@
   </widget>
   <action name="actionShow_Supplier">
    <property name="icon">
-    <iconset theme="stuff">
-     <normaloff>:/staua/study stuff/PYQT/60807.svg</normaloff>:/staua/study stuff/PYQT/60807.svg</iconset>
+    <iconset resource="rec.qrc">
+     <normaloff>:/Suppliers/Suppliers/addSupplier.svg</normaloff>:/Suppliers/Suppliers/addSupplier.svg</iconset>
    </property>
    <property name="text">
     <string>Add Supplier</string>
@@ -247,8 +247,8 @@
   </action>
   <action name="actionBack">
    <property name="icon">
-    <iconset>
-     <normaloff>:/staua/study stuff/PYQT/Left_Arrow_-512.png</normaloff>:/staua/study stuff/PYQT/Left_Arrow_-512.png</iconset>
+    <iconset resource="rec.qrc">
+     <normaloff>:/Suppliers/Suppliers/Left_Arrow_-512.png</normaloff>:/Suppliers/Suppliers/Left_Arrow_-512.png</iconset>
    </property>
    <property name="text">
     <string>Back</string>
@@ -258,6 +258,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="rec.qrc"/>
+ </resources>
  <connections/>
 </ui>

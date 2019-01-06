@@ -319,7 +319,7 @@ background-color: rgb(191, 191, 255);
        <string notr="true">font-size:35px;</string>
       </property>
       <property name="text">
-       <string>Varun Enterprises</string>
+       <string>Inventory project</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>

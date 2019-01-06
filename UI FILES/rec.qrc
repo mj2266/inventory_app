@@ -8,4 +8,8 @@
     <file>Homepage/Stock.png</file>
     <file>Homepage/Supplier.png</file>
   </qresource>
+  <qresource prefix="Suppliers">
+    <file>Suppliers/addSupplier.svg</file>
+    <file>Suppliers/Left_Arrow_-512.png</file>
+  </qresource>
 </RCC>

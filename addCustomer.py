@@ -11,6 +11,8 @@ class addCustomerDialog(Base, Form):
         super(self.__class__, self).__init__(parent)
         self.setupUi(self)
         
+        self.okButton.clicked.connect(self.close)
+        
         
 if __name__ == '__main__':
     import sys
@@ -20,5 +22,5 @@ if __name__ == '__main__':
         
     w = addCustomerDialog()
     w.show()
-    sys.exit(app.exec_())# -*- coding: utf-8 -*-
+    sys.exit(app.exec_())
 
