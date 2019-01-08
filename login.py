@@ -1,7 +1,7 @@
 import os
 from PyQt5 import QtGui, uic, QtWidgets
-from functools import partial
 from main import MainWidget
+import rec_rc
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 Form, Base = uic.loadUiType(os.path.join(current_dir, "login.ui"))

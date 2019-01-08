@@ -1,7 +1,7 @@
 import os
 from PyQt5 import QtGui, uic, QtWidgets
 from functools import partial
-import Homepage.rec_rc
+import rec_rc
 
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
