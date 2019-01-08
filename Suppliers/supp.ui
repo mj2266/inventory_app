@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>590</width>
-    <height>499</height>
+    <height>490</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -138,6 +138,9 @@ QPushButton:pressed {
             <property name="alternatingRowColors">
              <bool>true</bool>
             </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::ExtendedSelection</enum>
+            </property>
             <attribute name="horizontalHeaderStretchLastSection">
              <bool>false</bool>
             </attribute>
@@ -145,7 +148,7 @@ QPushButton:pressed {
              <bool>false</bool>
             </attribute>
             <attribute name="verticalHeaderStretchLastSection">
-             <bool>true</bool>
+             <bool>false</bool>
             </attribute>
             <column>
              <property name="text">
@@ -279,7 +282,7 @@ QPushButton:pressed {
   </widget>
   <action name="actionShow_Supplier">
    <property name="icon">
-    <iconset resource="rec.qrc">
+    <iconset>
      <normaloff>:/Suppliers/Suppliers/addSupplier.svg</normaloff>:/Suppliers/Suppliers/addSupplier.svg</iconset>
    </property>
    <property name="text">
@@ -291,7 +294,7 @@ QPushButton:pressed {
   </action>
   <action name="actionBack">
    <property name="icon">
-    <iconset resource="rec.qrc">
+    <iconset>
      <normaloff>:/Suppliers/Suppliers/Left_Arrow_-512.png</normaloff>:/Suppliers/Suppliers/Left_Arrow_-512.png</iconset>
    </property>
    <property name="text">
