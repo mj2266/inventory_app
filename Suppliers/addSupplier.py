@@ -5,7 +5,7 @@ import re
 import pymysql
 current_dir = os.path.dirname(os.path.abspath(__file__))
 Form, Base = uic.loadUiType(
-        os.path.join(current_dir, "UI FILES/addSupplier.ui")
+        os.path.join(current_dir, "addSupplier.ui")
         )
 
 

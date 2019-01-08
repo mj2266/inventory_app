@@ -65,13 +65,13 @@
   <customwidget>
    <class>homepageWindow</class>
    <extends>QWidget</extends>
-   <header>homepage</header>
+   <header>Homepage/homepage</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>supplierWindow</class>
    <extends>QWidget</extends>
-   <header>suppliers</header>
+   <header>Suppliers/suppliers</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

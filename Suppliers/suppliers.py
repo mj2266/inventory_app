@@ -2,10 +2,10 @@ import os
 from PyQt5 import uic, QtWidgets
 import rec_rc
 import pymysql
-from addSupplier import addSupplierDialog
+from Suppliers.addSupplier import addSupplierDialog
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-Form, Base = uic.loadUiType(os.path.join(current_dir, "UI FILES/supp.ui"))
+Form, Base = uic.loadUiType(os.path.join(current_dir, "supp.ui"))
 
 
 class supplierWindow(Base, Form):
@@ -25,6 +25,7 @@ class supplierWindow(Base, Form):
     def addSupplier(self):
         self.addWindow = addSupplierDialog()
         self.addWindow.exec_()
+        
 
     def populate_table(self):
         db = pymysql.connect("localhost", "root", "", "ims")

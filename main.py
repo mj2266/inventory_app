@@ -3,7 +3,7 @@ from PyQt5 import QtGui, uic, QtWidgets
 from functools import partial
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-Form, Base = uic.loadUiType(os.path.join(current_dir, "UI FILES/main.ui"))
+Form, Base = uic.loadUiType(os.path.join(current_dir, "main.ui"))
 
 
 class MainWidget(Base, Form):

@@ -1,11 +1,10 @@
 import os
 from PyQt5 import QtGui, uic, QtWidgets
 from functools import partial
-from addSupplier import addSupplierDialog
 from main import MainWidget
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-Form, Base = uic.loadUiType(os.path.join(current_dir, "UI FILES/login.ui"))
+Form, Base = uic.loadUiType(os.path.join(current_dir, "login.ui"))
 
 
 class loginWindow(Base, Form):
