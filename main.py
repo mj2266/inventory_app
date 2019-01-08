@@ -12,10 +12,10 @@ class MainWidget(Base, Form):
         self.setupUi(self)
         self.homepage.suppliersButton.clicked.connect(self.foo)
         self.supplier.actionBack.triggered.connect(self.boo)
-    
+
     def foo(self):
         self.stackedWidget.setCurrentIndex(1)
-        
+
     def boo(self):
         self.stackedWidget.setCurrentIndex(0)
 
@@ -28,6 +28,4 @@ if __name__ == '__main__':
 
     w = MainWidget()
     w.show()
-    w.showMaximized()
     sys.exit(app.exec_())
-    

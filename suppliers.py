@@ -16,6 +16,11 @@ class supplierWindow(Base, Form):
         self.searchButton.clicked.connect(self.search_Table)
         self.showAllButton.clicked.connect(self.populate_table)
         self.actionShow_Supplier.triggered.connect(self.addSupplier)
+        
+        for i in range(5):
+            self.tableWidget.horizontalHeader().setSectionResizeMode(i,QtWidgets.QHeaderView.Stretch)
+            
+        self.tableWidget.horizontalHeader().setSectionResizeMode(5,QtWidgets.QHeaderView.ResizeToContents)
 
     def addSupplier(self):
         self.addWindow = addSupplierDialog()

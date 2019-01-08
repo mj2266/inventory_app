@@ -6,12 +6,38 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>447</width>
+    <width>590</width>
     <height>499</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+background-color: qlineargradient(spread:reflect, x1:0.5, y1:1, x2:0.5, y2:0, stop:0.289773 rgba(191, 191, 255, 255), stop:1 rgba(255, 255, 255, 255));
+}
+
+
+
+QPushButton {
+	width: 150%;
+height:20px;
+	padding: 3%;
+	background:#25D366;
+	border-bottom: 2px solid #30C29E;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;	
+	color: #fff;
+ border-radius: 10px;
+font-size:20px;
+color:purple;
+}
+QPushButton:pressed {
+    background: darkgreen;
+}
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_4">
@@ -103,8 +129,23 @@
           </item>
           <item row="1" column="0">
            <widget class="QTableWidget" name="tableWidget">
+            <property name="inputMethodHints">
+             <set>Qt::ImhNone</set>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustIgnored</enum>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>false</bool>
+            </attribute>
             <attribute name="verticalHeaderVisible">
              <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderStretchLastSection">
+             <bool>true</bool>
             </attribute>
             <column>
              <property name="text">
@@ -177,6 +218,9 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="inputMethodHints">
+             <set>Qt::ImhNoAutoUppercase</set>
+            </property>
            </widget>
           </item>
           <item row="0" column="3">
@@ -206,7 +250,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>447</width>
+     <width>590</width>
      <height>21</height>
     </rect>
    </property>
