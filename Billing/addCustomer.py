@@ -4,7 +4,7 @@ from functools import partial
 import rec_rc
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-Form, Base = uic.loadUiType(os.path.join(current_dir, "UI FILES/addCustomer.ui"))
+Form, Base = uic.loadUiType(os.path.join(current_dir, "addCustomer.ui"))
 
 class addCustomerDialog(Base, Form):
     def __init__(self, parent=None):

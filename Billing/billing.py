@@ -2,10 +2,10 @@ import os
 from PyQt5 import QtGui, uic, QtWidgets
 from PyQt5.QtWidgets import QInputDialog
 import rec_rc
-from addCustomer import addCustomerDialog
+from Billing.addCustomer import addCustomerDialog
 import pymysql
 current_dir = os.path.dirname(os.path.abspath(__file__))
-Form, Base = uic.loadUiType(os.path.join(current_dir, "UI FILES/billing.ui"))
+Form, Base = uic.loadUiType(os.path.join(current_dir, "billing.ui"))
 
 
 class billingWindow(Base, Form):
@@ -21,6 +21,7 @@ class billingWindow(Base, Form):
     def addCustomer(self):
         self.addCust = addCustomerDialog()
         self.addCust.exec_()
+        address = self.addCust.addressInput
 
     def populateCombo1(self):
         db = pymysql.connect("localhost", "root", "", "ims")
