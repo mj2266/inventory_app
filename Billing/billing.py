@@ -12,7 +12,9 @@ class billingWindow(Base, Form):
     def __init__(self, parent=None):
         super(self.__class__, self).__init__(parent)
         self.setupUi(self)
+        self.Search.clicked.connect(self.searchCust)
         self.addContact.clicked.connect(self.addCustomer)
+        #self.addItem.clicked.connect(self.addItem)
 
         self.populateCombo1()
         self.populateCombo2()
@@ -21,7 +23,8 @@ class billingWindow(Base, Form):
     def addCustomer(self):
         self.addCust = addCustomerDialog()
         self.addCust.exec_()
-        address = self.addCust.addressInput
+        self.display = self.addCust.AdressInput.text()
+
 
     def populateCombo1(self):
         db = pymysql.connect("localhost", "root", "", "ims")
@@ -62,8 +65,31 @@ class billingWindow(Base, Form):
         except pymysql.InternalError as error:
             code, msg = error.args
             print("-------", code, msg)
-
         db.close()
+        
+    def searchCust(self):
+        contact = self.contact.text()
+        db = pymysql.connect("localhost", "root", "", "ims")
+        cursor = db.cursor()
+       
+        try:
+            cursor.execute("select C_address from Customer_info where C_contact = %s",contact)
+            data = cursor.fetchall()
+            self.display.setPlainText(data[0][0])
+        except pymysql.InternalError as error:
+            code, msg = error.args
+            print("-------", code, msg)
+        db.close()
+        
+""" def addItem(self):
+        cbox2Text = self.cbox2.currentText()
+        db = pymysql.connect("localhost", "root", "", "ims")
+        curso r= db.cursor()
+        
+        try:
+            cursor.execute("select item_name, item_price from items ")"""
+        
+        
         
 
 if __name__ == '__main__':
