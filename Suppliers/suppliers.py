@@ -57,6 +57,7 @@ class supplierWindow(Base, Form):
     def addSupplier(self):
         self.addWindow = addSupplierDialog()
         self.addWindow.exec_()
+        
         self.populate_table()
 
     def populate_table(self):

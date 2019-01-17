@@ -1,140 +1,24 @@
-# -*- coding: utf-8 -*-
+import os
+from PyQt5 import uic, QtWidgets
+# import rec_rc
+import pymysql
 
-# Form implementation generated from reading ui file 'order.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
-
-from PyQt5 import QtCore, QtGui, QtWidgets
-
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(976, 825)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
-        self.gridLayout.setObjectName("gridLayout")
-        self.frame_3 = QtWidgets.QFrame(self.centralwidget)
-        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_3.setObjectName("frame_3")
-        self.gridLayout_2 = QtWidgets.QGridLayout(self.frame_3)
-        self.gridLayout_2.setObjectName("gridLayout_2")
-        self.frame_2 = QtWidgets.QFrame(self.frame_3)
-        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_2.setObjectName("frame_2")
-        self.gridLayout_4 = QtWidgets.QGridLayout(self.frame_2)
-        self.gridLayout_4.setObjectName("gridLayout_4")
-        self.result = QtWidgets.QTreeWidget(self.frame_2)
-        self.result.setObjectName("result")
-        item_0 = QtWidgets.QTreeWidgetItem(self.result)
-        self.gridLayout_4.addWidget(self.result, 0, 0, 1, 1)
-        self.gridLayout_2.addWidget(self.frame_2, 2, 0, 1, 1)
-        self.search = QtWidgets.QFrame(self.frame_3)
-        self.search.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.search.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.search.setObjectName("search")
-        self.gridLayout_3 = QtWidgets.QGridLayout(self.search)
-        self.gridLayout_3.setObjectName("gridLayout_3")
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem, 0, 5, 1, 1)
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem1, 0, 0, 1, 1)
-        self.label_2 = QtWidgets.QLabel(self.search)
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.gridLayout_3.addWidget(self.label_2, 1, 1, 1, 1)
-        self.searchByIdInput = QtWidgets.QLineEdit(self.search)
-        self.searchByIdInput.setObjectName("searchByIdInput")
-        self.gridLayout_3.addWidget(self.searchByIdInput, 0, 2, 1, 2)
-        self.generateByIdButton = QtWidgets.QPushButton(self.search)
-        font = QtGui.QFont()
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.generateByIdButton.setFont(font)
-        self.generateByIdButton.setObjectName("generateByIdButton")
-        self.gridLayout_3.addWidget(self.generateByIdButton, 0, 4, 1, 1)
-        self.endDate = QtWidgets.QDateEdit(self.search)
-        self.endDate.setObjectName("endDate")
-        self.gridLayout_3.addWidget(self.endDate, 1, 2, 1, 1)
-        self.startDate = QtWidgets.QDateEdit(self.search)
-        self.startDate.setObjectName("startDate")
-        self.gridLayout_3.addWidget(self.startDate, 1, 3, 1, 1)
-        self.generateByDateResult = QtWidgets.QPushButton(self.search)
-        font = QtGui.QFont()
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.generateByDateResult.setFont(font)
-        self.generateByDateResult.setObjectName("generateByDateResult")
-        self.gridLayout_3.addWidget(self.generateByDateResult, 1, 4, 1, 1)
-        self.label = QtWidgets.QLabel(self.search)
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        font.setBold(False)
-        font.setWeight(50)
-        self.label.setFont(font)
-        self.label.setFrameShape(QtWidgets.QFrame.NoFrame)
-        self.label.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.label.setObjectName("label")
-        self.gridLayout_3.addWidget(self.label, 0, 1, 1, 1)
-        self.showAll = QtWidgets.QPushButton(self.search)
-        self.showAll.setObjectName("showAll")
-        self.gridLayout_3.addWidget(self.showAll, 2, 2, 1, 2)
-        self.gridLayout_2.addWidget(self.search, 0, 0, 1, 1)
-        self.gridLayout.addWidget(self.frame_3, 0, 0, 1, 1)
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 976, 26))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
-
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-    def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.result.headerItem().setText(0, _translate("MainWindow", "Date"))
-        self.result.headerItem().setText(1, _translate("MainWindow", "Item"))
-        self.result.headerItem().setText(2, _translate("MainWindow", "Quantity"))
-        self.result.headerItem().setText(3, _translate("MainWindow", "Cost"))
-        self.result.headerItem().setText(4, _translate("MainWindow", "Sell Price"))
-        self.result.headerItem().setText(5, _translate("MainWindow", "Total Cost"))
-        self.result.headerItem().setText(6, _translate("MainWindow", "Gross Profit"))
-        __sortingEnabled = self.result.isSortingEnabled()
-        self.result.setSortingEnabled(False)
-        self.result.topLevelItem(0).setText(0, _translate("MainWindow", "15-12-2001"))
-        self.result.topLevelItem(0).setText(1, _translate("MainWindow", "Wood"))
-        self.result.topLevelItem(0).setText(2, _translate("MainWindow", "2"))
-        self.result.topLevelItem(0).setText(3, _translate("MainWindow", "1500"))
-        self.result.topLevelItem(0).setText(4, _translate("MainWindow", "2000"))
-        self.result.topLevelItem(0).setText(5, _translate("MainWindow", "2000"))
-        self.result.topLevelItem(0).setText(6, _translate("MainWindow", "500"))
-        self.result.setSortingEnabled(__sortingEnabled)
-        self.label_2.setText(_translate("MainWindow", "search by date"))
-        self.searchByIdInput.setPlaceholderText(_translate("MainWindow", "Type your order-id here"))
-        self.generateByIdButton.setText(_translate("MainWindow", "Generate"))
-        self.generateByDateResult.setText(_translate("MainWindow", "Generate"))
-        self.label.setText(_translate("MainWindow", "search by order-id"))
-        self.showAll.setText(_translate("MainWindow", "SHOW ALL"))
+current_dir = os.path.dirname(os.path.abspath(__file__))
+Form, Base = uic.loadUiType(os.path.join(current_dir, "order.ui"))
 
 
-if __name__ == "__main__":
+class orderWindow(Base, Form):
+    def __init__(self, parent=None):
+        super(self.__class__, self).__init__(parent)
+        self.setupUi(self)
+        
+
+if __name__ == '__main__':
     import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+    app = QtWidgets.QApplication.instance()
+    if app is None:
+        app = QtWidgets.QApplication(sys.argv)
 
+    w = orderWindow()
+    w.show()
+    sys.exit(app.exec_())

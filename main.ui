@@ -44,8 +44,12 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
       <widget class="homepageWindow" name="homepage"/>
       <widget class="supplierWindow" name="supplier"/>
+      <widget class="orderWindow" name="order"/>
      </widget>
     </item>
    </layout>
@@ -72,6 +76,12 @@
    <class>supplierWindow</class>
    <extends>QWidget</extends>
    <header>Suppliers/suppliers</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>orderWindow</class>
+   <extends>QWidget</extends>
+   <header>Orders/order</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

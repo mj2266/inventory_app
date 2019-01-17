@@ -25,6 +25,7 @@ class billingWindow(Base, Form):
         self.addCust.exec_()
         self.display = self.addCust.AdressInput.text()
 
+
     def populateCombo1(self):
         db = pymysql.connect("localhost", "root", "", "ims")
         cursor = db.cursor()
