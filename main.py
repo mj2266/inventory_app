@@ -11,13 +11,20 @@ class MainWidget(Base, Form):
         super(self.__class__, self).__init__(parent)
         self.setupUi(self)
         self.homepage.suppliersButton.clicked.connect(self.foo)
+        self.homepage.ordersButton.clicked.connect(self.doo)
         self.supplier.actionBack.triggered.connect(self.boo)
-
+        self.order.generateByIdButton.clicked.connect(self.boo)
+        self.stackedWidget.setCurrentIndex(0)
+        
     def foo(self):
         self.stackedWidget.setCurrentIndex(1)
 
+    def doo(self):
+        self.stackedWidget.setCurrentIndex(2)
+        
     def boo(self):
         self.stackedWidget.setCurrentIndex(0)
+    
 
 
 if __name__ == '__main__':

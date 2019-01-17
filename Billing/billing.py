@@ -2,7 +2,7 @@ import os
 from PyQt5 import QtGui, uic, QtWidgets
 from PyQt5.QtWidgets import QInputDialog
 import rec_rc
-from Billing.addCustomer import addCustomerDialog
+from addCustomer import addCustomerDialog
 import pymysql
 current_dir = os.path.dirname(os.path.abspath(__file__))
 Form, Base = uic.loadUiType(os.path.join(current_dir, "billing.ui"))
