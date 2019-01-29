@@ -13,6 +13,32 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+background-color: qlineargradient(spread:reflect, x1:0.5, y1:1, x2:0.5, y2:0, stop:0.289773 rgba(191, 191, 255, 255), stop:1 rgba(255, 255, 255, 255));
+}
+
+
+
+QPushButton {
+	width: 150%;
+height:20px;
+	padding: 3%;
+	background:#25D366;
+	border-bottom: 2px solid #30C29E;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;	
+	color: #fff;
+ border-radius: 10px;
+font-size:20px;
+color:purple;
+}
+QPushButton:pressed {
+    background: darkgreen;
+}
+</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout_4">
    <item row="2" column="0" colspan="2">
     <widget class="QFrame" name="frame_3">
@@ -82,6 +108,11 @@
    </item>
    <item row="1" column="0" colspan="2">
     <widget class="QFrame" name="frame_2">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -91,6 +122,11 @@
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="2" column="3" alignment="Qt::AlignTop">
        <widget class="QLabel" name="addressLabel">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Address</string>
         </property>
@@ -111,6 +147,11 @@
       </item>
       <item row="4" column="3">
        <widget class="QLabel" name="phoneNumber1Label">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Phone Number 1</string>
         </property>
@@ -118,6 +159,11 @@
       </item>
       <item row="6" column="3">
        <widget class="QLabel" name="phoneNumber2Label">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Phone Number 2</string>
         </property>
@@ -177,6 +223,11 @@
       </item>
       <item row="0" column="3">
        <widget class="QLabel" name="nameLabel">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Name</string>
         </property>
@@ -184,6 +235,11 @@
       </item>
       <item row="8" column="3">
        <widget class="QLabel" name="emailLabel">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Email Address</string>
         </property>
@@ -268,19 +324,49 @@
        </spacer>
       </item>
       <item row="0" column="4">
-       <widget class="QLineEdit" name="nameInput"/>
+       <widget class="QLineEdit" name="nameInput">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+       </widget>
       </item>
       <item row="2" column="4">
-       <widget class="QLineEdit" name="addressInput"/>
+       <widget class="QLineEdit" name="addressInput">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+       </widget>
       </item>
       <item row="4" column="4">
-       <widget class="QLineEdit" name="phoneNumber1Input"/>
+       <widget class="QLineEdit" name="phoneNumber1Input">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+       </widget>
       </item>
       <item row="6" column="4">
-       <widget class="QLineEdit" name="phoneNumber2Input"/>
+       <widget class="QLineEdit" name="phoneNumber2Input">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+       </widget>
       </item>
       <item row="8" column="4">
-       <widget class="QLineEdit" name="emailInput"/>
+       <widget class="QLineEdit" name="emailInput">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>

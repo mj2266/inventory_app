@@ -44,6 +44,9 @@ class supplierWindow(Base, Form):
         
         self.tableWidget.setEditTriggers(QtWidgets.QTableWidget.NoEditTriggers)
         self.tableWidget.doubleClicked.connect(self.editSupplier)
+
+    def fun(self,i):
+        print("index clicked is"+i)
         
     def editSupplier(self):
         for idx in self.tableWidget.selectionModel().selectedIndexes():

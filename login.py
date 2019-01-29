@@ -11,7 +11,19 @@ class loginWindow(Base, Form):
     def __init__(self, parent=None):
         super(self.__class__, self).__init__(parent)
         self.setupUi(self)
+        
+        # Setting Focus on username Input
+        self.usernameInput.setFocus()
+
+        # Login Button Pressed Event
         self.loginButton.clicked.connect(self.loginCheck)
+        
+        # Enter button press on Line Edit event
+        self.passwordInput.returnPressed.connect(self.loginButton.click)
+        self.usernameInput.returnPressed.connect(self.loginButton.click)
+        
+        # Enter Button pressed on Login button
+        self.loginButton.setAutoDefault(True)
 
     def loginCheck(self):
         username = self.usernameInput.text()

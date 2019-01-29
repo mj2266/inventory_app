@@ -17,7 +17,15 @@ class addSupplierDialog(Base, Form):
         self.cancelButton.clicked.connect(self.close)
         self.okButton.clicked.connect(self.fieldCheck)
         self.emailInput.installEventFilter(self)
-
+        
+        # Enter pressed is working even without below code
+#        # Enter Pressed on LineEdit 
+#        self.nameInput.returnPressed.connect(self.okButton.click)
+#        self.emailInput.returnPressed.connect(self.okButton.click)
+#        self.addressInput.returnPressed.connect(self.okButton.click)
+#        self.phoneNumber1Input.returnPressed.connect(self.okButton.click)
+#        self.phoneNumber2Input.returnPressed.connect(self.okButton.click)
+        
     def eventFilter(self, obj, event):
         if event.type() == QEvent.FocusOut:
             email = self.emailInput.text()
